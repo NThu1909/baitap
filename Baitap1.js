@@ -46,45 +46,55 @@
 
 // BAI TAP 3
 // const string1 = "LISTEN";
-// const string2 = "swimming";
+// const string2 = "swim";
 // const stringHomophone = () => {
 //   const cleanString = (str) => str.replace(/[^\w]/g, "").toLowerCase();
 //   const sortedStr1 = cleanString(string1).split("").sort().join("");
 
 //   const sortedStr2 = cleanString(string2).split("").sort().join("");
-//   return sortedStr1 === sortedStr2;0
+//   return sortedStr1 === sortedStr2;
+//   0;
 // };
 // console.log(stringHomophone());
 
 //BAI TAP 4
-// const arrCuted = [1, 2, 3, 4, 5, 6, 7, 8];
-// const divisionArr = (_, j) => {
+// const arrCuted = [1, 2, 3, 4, 5, 6, 8];
+// const divisionArr = (arr, j) => {
 //   const miniArr = [];
-//   for (let i = 0; i < arrCuted.length; i = i + j) {
-//     miniArr.push(arrCuted.slice(i, i + j));
+//   for (let i = 0; i < arr.length; i = i + j) {
+//     miniArr.push(arr.slice(i, i + j));
 //   }
 //   return miniArr;
 // };
 // console.log(divisionArr(arrCuted, 2));
 
 //BAI TAP 5
-
-// const func = () => {
-//   const arrEx5 = [
-//     1,
-//     2,
-//     3,
-//     4,
-//     5,
-//     6,
-//     7,
-//     8,
-//     [1, 2, 3, 4, 5, 6, 7],
-//     [1, 2, 3, 4, 5, 6],
-//   ];
-//   const newArr = newArr.concat(arrEx5);
+// const arrEx5 = [
+//   1,
+//   2,
+//   3,
+//   4,
+//   5,
+//   6,
+//   7,
+//   8,
+//   [1, 2, 3, 4, 5, 6, 7],
+//   [1, 2, 3, 4, 5, 6],
+// ];
+// const func = (arr) => {
+//   let arrResult = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (Array.isArray(arr[i])) {
+//       arrResult = [...arrResult, ...arr[i]];
+//     } else {
+//       arrResult.push(arr[i]);
+//     }
+//   }
+//   return arrResult;
 // };
-// console.log(func());
+// console.log(func(arrEx5));
+
+//arrResult.concat(func(arr[i]));
 //BAI TAP 6
 
 // const binarySearch = () => {
@@ -166,3 +176,35 @@
 //   console.log(newArr);
 // };
 // fnc();
+
+// BÀI TẬP 11
+// const sumNumbers = (n) => {
+//   if (n === 1) {
+//     return 1;
+//   } else {
+//     return n + sumNumbers(n - 1);
+//   }
+// };
+// console.log(sumNumbers(8));
+
+//BÀI TẬP 12
+
+// const factorialNumber = (n) => {
+//   if (n === 0 || n === 1) {
+//     return 1;
+//   } else {
+//     return (n = n * factorialNumber(n - 1));
+//   }
+// };
+// console.log(factorialNumber(4));
+
+//BÀI TẬP 13
+
+const fibonacci = (n) => {
+  if (n === 1 || n === 0) {
+    return n;
+  } else {
+    return (n = fibonacci(n - 1) + fibonacci(n - 2));
+  }
+};
+console.log(fibonacci(6));
